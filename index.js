@@ -23,7 +23,7 @@ const db = mysql.createConnection({
    password: process.env.PW,
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 server.get("/", (req, res) => {
    const sql = "SELECT * FROM images";
