@@ -10,7 +10,7 @@ server.use(express.static("public"));
 
 server.use(
    cors({
-      origin: "http://localhost:3000",
+      origin: "https://Ananth-babu96.github.io/template-client",
    })
 );
 server.use(express.json());
