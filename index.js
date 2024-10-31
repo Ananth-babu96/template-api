@@ -8,11 +8,11 @@ dotenv.config();
 const server = express();
 server.use(express.static("public"));
 
-// server.use(
-//    cors({
-//       origin: "http://localhost:3000",
-//    })
-// );
+server.use(
+   cors({
+      origin: "http://localhost:3000",
+   })
+);
 server.use(express.json());
 
 const db = mysql.createConnection({
