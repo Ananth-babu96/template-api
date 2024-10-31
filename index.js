@@ -11,7 +11,7 @@ server.use(express.static("public"));
 
 server.use(
    cors({
-      origin: "https://ananth-babu96.github.io/template-client/",
+      origin: "https://template-client-two.vercel.app/",
    })
 );
 server.use(express.json());
