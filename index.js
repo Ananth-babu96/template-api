@@ -11,7 +11,7 @@ server.use(express.static("public"));
 
 server.use(
    cors({
-      origin: "https://Ananth-babu96.github.io/template-client",
+      origin: " https://ananth-babu96.github.io/template-client/",
    })
 );
 server.use(express.json());
