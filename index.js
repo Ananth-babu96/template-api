@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const server = express();
+
 server.use(express.static("public"));
 
 server.use(
@@ -22,6 +23,8 @@ const db = mysql.createConnection({
    password: process.env.PW,
 });
 
+const port = process.env.PORT || 3000;
+
 server.get("/", (req, res) => {
    const sql = "SELECT * FROM images";
    db.query(sql, (err, result) => {
@@ -32,6 +35,5 @@ server.get("/", (req, res) => {
       }
    });
 });
-server.listen(5000, () => console.log("running at 5000"));
 
-console.log(process.env.USER);
+server.listen(port, () => console.log(`running at ${port}`));
